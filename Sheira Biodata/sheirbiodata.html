@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Biodata Sheira</title>
+  <style>
+    :root{
+      --brown-900: #3E2723; 
+      --brown-700: #6D4C41;
+      --brown-500: #A1887F;
+      --brown-300: #D7CCC8;
+      --cream: #FFF8E1;
+      --card-shadow: 0 6px 18px rgba(62,39,35,0.12);
+      --radius: 14px;
+      --max-width: 900px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color: var(--brown-900);
+    }
+
+    *{box-sizing: border-box}
+    body{
+      margin:0;
+      background: linear-gradient(180deg, var(--cream), #fff 60%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      padding:32px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--max-width);
+      background:linear-gradient(180deg, rgba(255,248,225,0.9), rgba(255,255,255,0.95));
+      border-radius:var(--radius);
+      box-shadow:var(--card-shadow);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 320px 1fr;
+      gap:0;
+    }
+
+    /* left panel (profile) */
+    .profile{
+      background: linear-gradient(180deg, var(--brown-700), var(--brown-500));
+      color: white;
+      padding:36px 28px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:18px;
+    }
+
+    .avatar{
+      width:140px;
+      height:140px;
+      border-radius:999px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.06), rgba(0,0,0,0.06));
+      border:6px solid rgba(255,255,255,0.12);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      font-size:32px;
+      letter-spacing:1px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.18) inset;
+    }
+
+    .name{
+      font-size:20px;
+      font-weight:700;
+      text-align:center;
+    }
+    .title{
+      font-size:13px;
+      opacity:0.95;
+      margin-top:-4px;
+      text-align:center;
+    }
+
+    .contact{
+      width:100%;
+      margin-top:8px;
+    }
+    .contact a{
+      display:block;
+      text-decoration:none;
+      color:rgba(255,255,255,0.95);
+      padding:8px 10px;
+      border-radius:8px;
+      background: rgba(255,255,255,0.03);
+      margin:6px 0;
+      font-size:14px;
+    }
+
+    .left-footer{
+      margin-top:auto;
+      width:100%;
+      text-align:center;
+      font-size:12px;
+      opacity:0.9;
+    }
+
+    /* right panel (details) */
+    .details{
+      padding:28px 34px;
+      background: white;
+    }
+
+    .section{
+      margin-bottom:18px;
+    }
+    .section h3{
+      margin:0 0 8px 0;
+      font-size:15px;
+      color:var(--brown-900);
+    }
+    .about{
+      line-height:1.6;
+      color:#3b2b27;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap:12px;
+    }
+
+    .chip{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background:var(--brown-300);
+      color:var(--brown-900);
+      font-size:13px;
+      margin:6px 6px 0 0;
+    }
+
+    .meta{
+      font-size:14px;
+      color:#4b352f;
+    }
+
+    .education-item{
+      padding:10px 12px;
+      border-radius:10px;
+      background: linear-gradient(180deg, #fff, var(--brown-300));
+      border:1px solid rgba(161,136,127,0.18);
+    }
+
+    /* small screens */
+    @media (max-width:880px){
+      .container{grid-template-columns:1fr;}
+      .profile{flex-direction:row; padding:18px; gap:14px; align-items:center}
+      .avatar{width:88px;height:88px;font-size:20px}
+      .name{font-size:18px}
+      .details{padding:20px}
+      .grid-2{grid-template-columns:1fr}
+    }
+
+    .avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 50%; 
+}
+
+    /* print friendly */
+    @media print{
+      body{background:white}
+      .container{box-shadow:none}
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+
+    <aside class="profile" aria-label="Profil">
+      <div class="avatar" aria-hidden="true">  
+    <img src="cc.jpeg" alt="Foto Profil">
+       </div>
+      <div style="text-align:center; width:100%;">
+        <div class="name">Sheira Fitria</div>
+        <div class="title">Pelajar</div>
+
+        <div class="contact" style="margin-top:12px;">
+          <a href="#" aria-label="Email">📧 sheirafitria45@gmail.com</a>
+          <a href="#" aria-label="Telepon">📱 +62 813-1392-0268</a>
+          <a href="#" aria-label="Lokasi">📍 Garut, Jawa Barat</a>
+        </div>
+      </div>
+
+      <div class="left-footer">Biodata Sheira</div>
+    </aside>
+
+    <section class="details" aria-label="Detail biodata">
+
+      <div class="section">
+        <h3>Tentang Saya</h3>
+        <p class="about">Halo! Saya <strong>Sheira</strong>. Saya adalah individu yang bersemangat dalam belajar hal baru, terutama di bidang teknologi dan pengembangan diri. Memiliki kepribadian terbuka, mudah beradaptasi, serta senang bekerja sama dalam tim. Saya berfokus untuk terus mengasah keterampilan, meningkatkan produktivitas, dan memberikan kontribusi terbaik dalam setiap kesempatan.</p>
+      </div>
+
+      <div class="section">
+        <h3>Minat & Hobi</h3>
+        <div class="grid-2">
+          <div>
+            <span class="chip">Menggambar</span>
+            <span class="chip">Coding</span>
+            <span class="chip">Editing Video</span>
+          </div>
+          <div>
+            <span class="chip">Fotografi Alam</span>
+            <span class="chip">Gaming</span>
+            <span class="chip">Menonton Film</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Asal Sekolah</h3>
+        <div class="education-item">
+          <div style="font-weight:700">SMKN 1 Garut</div>
+          <div class="meta">2024/2025</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Kelas</h3>
+        <div class="education-item">
+          <div style="font-weight:700">XI - RPL 2</div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+</body>
+</html>
